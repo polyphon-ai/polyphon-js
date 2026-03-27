@@ -39,6 +39,19 @@ export interface UserProfile {
   updatedAt: number;
 }
 
+interface Voice {
+  id: string;
+  name: string;
+  type: 'api' | 'cli';
+  provider: string; // e.g. "anthropic", "openai", "copilot"
+  color: string; // assigned per session for UI differentiation
+  avatarIcon: string; // icon identifier for the UI
+
+  send(message: Message, context: Message[]): AsyncIterable<string>;
+  isAvailable(): Promise<boolean>;
+  abort(): void;
+}
+
 export interface Message {
   id: string;
   sessionId: string;
