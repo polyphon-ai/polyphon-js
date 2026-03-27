@@ -4,6 +4,10 @@ JavaScript/TypeScript SDK for the [Polyphon](https://polyphon.ai) JSON-RPC API.
 
 Connect to a running Polyphon instance, manage compositions and sessions, send messages to voices, and stream responses — all from Node.js or any bundler-based project.
 
+> **This repository is auto-synced from [polyphon-ai/polyphon](https://github.com/polyphon-ai/polyphon).**
+> All source files in `src/` are generated — do not open pull requests here.
+> To contribute to the SDK, submit PRs to `polyphon-ai/polyphon` targeting the files under `src/sdk/` and `src/shared/`.
+
 ## Requirements
 
 - Node.js ≥ 18
