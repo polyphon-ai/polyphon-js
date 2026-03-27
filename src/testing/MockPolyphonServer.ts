@@ -1,3 +1,5 @@
+// AUTO-SYNCED from polyphon/src/sdk — do not edit by hand
+
 import * as net from 'node:net';
 import {
   DEFAULT_COMPOSITION,

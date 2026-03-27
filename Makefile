@@ -13,4 +13,4 @@ clean:
 	rm -rf dist
 
 verify-dist:
-	test ! -d dist/testing && test -z "$$(find dist -name '*.test.js')" && echo "dist/ clean"
+	test -d dist/testing && test -z "$$(find dist -name '*.test.js')" && echo "dist/ ok"

@@ -46,11 +46,20 @@ src/
 
 ## Source of Truth
 
-`src/types.ts` and `src/api.ts` are **synced from** `polyphon/src/shared/types.ts` and
-`polyphon/src/shared/api.ts`. Do not edit them by hand — they are updated automatically
-via the `sync-from-polyphon.yml` GitHub Actions workflow when a Polyphon release publishes.
+**All source files in `src/` are AUTO-SYNCED from the `polyphon` repository. Do not edit them by hand.**
 
-All other source files are maintained here.
+| File(s) | Synced from |
+|---|---|
+| `src/types.ts`, `src/api.ts` | `polyphon/src/shared/types.ts`, `polyphon/src/shared/api.ts` |
+| `src/client.ts`, `src/errors.ts`, `src/token.ts`, `src/index.ts` | `polyphon/src/sdk/*.ts` |
+| `src/testing/` | `polyphon/src/sdk/testing/` |
+| `src/*.test.ts`, `src/testing/*.test.ts` | `polyphon/src/sdk/**/*.test.ts` |
+
+The sync runs automatically via the `sync-sdk.yml` GitHub Actions workflow on each Polyphon release tag.
+Tests run in `polyphon` CI first (against the real server implementation), then the synced files are
+published here and to npm.
+
+The only files native to this repo are: `package.json`, `tsconfig.json`, `tsconfig.build.json`, `README.md`, `CLAUDE.md`.
 
 ---
 
@@ -77,9 +86,11 @@ your Polyphon install.
 
 ```sh
 npm install
-make build      # type-check + compile to dist/
-make test       # run all tests
-make lint       # type-check only
+make build        # type-check + compile to dist/ (includes dist/testing/)
+make test         # run all tests
+make lint         # type-check only
+make verify-dist  # assert dist/testing/ exists and no *.test.js leaked into dist/
+make clean        # rm -rf dist/
 ```
 
 ---
@@ -90,6 +101,7 @@ make lint       # type-check only
 - Integration tests exercise the full client ↔ server round-trip via `MockPolyphonServer`
 - `MockPolyphonServer` must implement all API methods and is the primary testing artifact
 - Keep mock responses realistic — word-by-word streaming with configurable delay, not single-chunk dumps
+- `@polyphon-ai/js/testing` is a published subpath export — never include `*.test.js` in `dist/`
 
 ---
 

@@ -1,3 +1,5 @@
+// AUTO-SYNCED from polyphon/src/sdk — do not edit by hand
+
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { PolyphonClient } from './client.js';
 import { MockPolyphonServer } from './testing/MockPolyphonServer.js';

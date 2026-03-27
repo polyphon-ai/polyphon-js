@@ -1,3 +1,5 @@
+// AUTO-SYNCED from polyphon/src/sdk — do not edit by hand
+
 import type { Composition, Session, Message } from '../types.js';
 import type { SettingsGetUserProfileResult } from '../api.js';
 
