@@ -1,4 +1,4 @@
-// AUTO-SYNCED from polyphon/src/shared/api.ts — do not edit by hand
+// AUTO-SYNCED from polyphon/src/shared — do not edit by hand
 
 // JSON-RPC 2.0 envelope types and all TCP API method request/response shapes.
 // These types are importable by the poly CLI (duplicated into packages/poly/src/types.ts).
@@ -61,7 +61,7 @@ export interface AuthenticateResult {
 }
 
 // api.getStatus
-export type ApiGetStatusResult = import('./types').ApiStatus;
+export type ApiGetStatusResult = import('./types.js').ApiStatus;
 
 // compositions.list
 export interface CompositionsListParams {
@@ -171,7 +171,7 @@ export interface VoiceBroadcastParams {
   stream?: boolean;
 }
 export interface VoiceBroadcastResult {
-  messages: import('./types').Message[];
+  messages: import('./types.js').Message[];
 }
 
 // voice.ask
@@ -182,7 +182,7 @@ export interface VoiceAskParams {
   stream?: boolean;
 }
 export interface VoiceAskResult {
-  message: import('./types').Message;
+  message: import('./types.js').Message;
 }
 
 // voice.abort
@@ -198,17 +198,17 @@ export interface SearchMessagesParams {
   query: string;
   sessionId?: string;
 }
-export type SearchMessagesResult = import('./types').SearchResult[];
+export type SearchMessagesResult = import('./types.js').SearchResult[];
 
 // settings.getProviderStatus
 // Extends ProviderStatus with CLI availability, resolved at request time.
-export type SettingsProviderStatus = import('./types').ProviderStatus & {
-  cliStatus: import('./types').CliStatus | null;
+export type SettingsProviderStatus = import('./types.js').ProviderStatus & {
+  cliStatus: import('./types.js').CliStatus | null;
 };
 export type SettingsGetProviderStatusResult = SettingsProviderStatus[];
 
 // settings.getDebugInfo
-export type SettingsGetDebugInfoResult = import('./types').DebugInfo;
+export type SettingsGetDebugInfoResult = import('./types.js').DebugInfo;
 
 // settings.getUserProfile
 export interface SettingsGetUserProfileResult {
@@ -219,13 +219,13 @@ export interface SettingsGetUserProfileResult {
 }
 
 // mcp.getStatus
-export type McpGetStatusResult = import('./types').McpStatus;
+export type McpGetStatusResult = import('./types.js').McpStatus;
 
 // mcp.setEnabled
 export interface McpSetEnabledParams {
   enabled: boolean;
 }
-export type McpSetEnabledResult = import('./types').McpStatus;
+export type McpSetEnabledResult = import('./types.js').McpStatus;
 
 // api.getSpec
 export interface OpenRpcSpec {

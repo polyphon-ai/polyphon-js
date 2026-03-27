@@ -1,4 +1,4 @@
-// AUTO-SYNCED from polyphon/src/shared/types.ts — do not edit by hand
+// AUTO-SYNCED from polyphon/src/shared — do not edit by hand
 
 // Core domain types shared between main and renderer processes.
 // These are plain serializable data shapes — no class instances cross the IPC boundary.
