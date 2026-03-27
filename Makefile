@@ -1,4 +1,4 @@
-.PHONY: build test lint clean
+.PHONY: build test lint clean verify-dist
 
 build:
 	npm run build
@@ -11,3 +11,6 @@ lint:
 
 clean:
 	rm -rf dist
+
+verify-dist:
+	test ! -d dist/testing && test -z "$$(find dist -name '*.test.js')" && echo "dist/ clean"
