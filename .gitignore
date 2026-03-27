@@ -1,3 +1,6 @@
 node_modules/
 dist/
 *.js.map
+
+# Internal planning and development docs
+docs/
