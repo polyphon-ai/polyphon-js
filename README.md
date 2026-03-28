@@ -1,6 +1,6 @@
 # @polyphon-ai/js
 
-[![npm](https://img.shields.io/npm/v/@polyphon-ai/js)](https://www.npmjs.com/package/@polyphon-ai/js) [![npm downloads](https://img.shields.io/npm/dm/@polyphon-ai/js)](https://www.npmjs.com/package/@polyphon-ai/js) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/PolyphonAI)
+[![npm](https://img.shields.io/npm/v/@polyphon-ai/js)](https://www.npmjs.com/package/@polyphon-ai/js) [![npm downloads](https://img.shields.io/npm/dm/@polyphon-ai/js)](https://www.npmjs.com/package/@polyphon-ai/js) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
 
 JavaScript/TypeScript SDK for the [Polyphon](https://polyphon.ai) JSON-RPC API.
 
