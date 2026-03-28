@@ -1,5 +1,7 @@
 # @polyphon-ai/js
 
+[![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/PolyphonAI)
+
 JavaScript/TypeScript SDK for the [Polyphon](https://polyphon.ai) JSON-RPC API.
 
 Connect to a running Polyphon instance, manage compositions and sessions, send messages to voices, and stream responses — all from Node.js or any bundler-based project.
